@@ -1,0 +1,43 @@
+IMPORTAR LA BASE DE DATOS .BAK
+
+DESCARGAR EL ZIP DONDE ESTA LOS DRIVERS UTILIZADOS PARA CONECTAR LA BASE DE DATOS, SON 2 QUE ESTAN EN EL MISMO ZIP SOLO HAY QUE ELEGIR EL ADECUADO A NUESTRO ENTORNO PHP: https://go.microsoft.com/fwlink/?linkid=2258816 y PONERLO DENTRO DE LA CARPETA DE LAS EXTENSIONES DE PHP Y AGREGARLOS EN EL PHP.INI
+
+DE SER NECESARIO CONFIGURAR LOS PARAMETROS DE CONEXION EN EL ARCHIVO DATABASE.PHP EN APP/CONFIG PARA CONECTARSE A LA BASE DE DATOS:
+
+ public array $default = [
+        //'DSN'          => //DSN SOLO ODBC,
+        'hostname'     => 'localhost\SQLEXPRESS',
+        'username'     => 'sa',
+        'password'     => '',
+        'database'     => 'ecocorcho',
+        'DBDriver'     => 'SQLSRV',
+        'DBPrefix'     => '',
+        'pConnect'     => false,
+        'DBDebug'      => true,
+        'charset'      => 'utf8', 
+        'DBCollat'     => 'utf8mb4_unicode_ci',
+        'swapPre'      => '',
+        'encrypt'      => false,
+        'compress'     => false,
+        'strictOn'     => false,
+        'failover'     => array(),
+        'port'         => '',
+        'numberNative' => false,
+        'foundRows'    => false,
+        'dateFormat'   => [
+            'date'     => 'Y-m-d',
+            'datetime' => 'Y-m-d H:i:s',
+            'time'     => 'H:i:s',
+        ],
+    ];
+
+
+CUALQUIER DUDA ESTAMOS DISPONIBLES YA QUE AUNQUE SE PROBO NUNCA SE ESTA EXCENTO A FALLA, DE ANTEMANO GRACIAS.
+
+
+################################################
+ULTIMOS CAMBIOS
+
+CAMBIAR LA BASE URL http://ecocorcho.mx/ A  http://localhost/ecocorcho/ (o depedende como lo tiene importado.)
+
+LA BD esta en APP/DATABASE
